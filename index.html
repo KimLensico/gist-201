@@ -80,17 +80,14 @@
     <script>
         /* JAVASCRIPT SECTION */ 
 
-                if (confirm("Are you associated with Codefellows?")) {
-                        alert("Thank you")
-                } else {
-                        alert("You will be prompted to make an account")
-                }
-
                 var username = prompt("Please create a username");
+                var passcode = prompt("Now enter a password")
+                var email = prompt("Enter  an e-mail associated with your account")
+                var course = prompt("Verify Codefellows course you are enrolled in")
                 if (username == null || username == "") {
                     alert("You have continued as Guest")
                 } else {
-                    alert("Welcome " + username + "!")
+                    alert("Welcome " + username + " you have registered your email as " + email + " while you are enrolled in " + course + " with your password as " + passcode)
                 }
 
                 var studentTeacher = prompt("Are you a teacher? (yes/no)");
