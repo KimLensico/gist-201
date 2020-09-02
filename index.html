@@ -8,11 +8,17 @@
         <style>
 /* CSS SECTION */
 
-            header {
+            h1 {
                 text-align: center;
                 color: hotpink;
                 font-family: 'Indie Flower';
-                font-size: 25px;
+                font-size: 30px;
+                margin: auto auto 0%; 
+            }
+
+            #demo {
+                text-align: right;
+                color: white;
             }
 
             body {
@@ -20,6 +26,10 @@
                 background: #000000;  
                 padding: 1% 25% 2%;
                 position: fixed;
+            }
+
+            header {
+                text-align: center;
             }
 
 /* credit for finding header font: https://www.w3schools.com/howto/tryit.asp?font=Indie%20Flower */
@@ -33,9 +43,9 @@
             }
 
             main {
-                border: #FFBCD4 2px solid;
+                border: hotpink 1px solid;
                 background: #FFBCD4;
-                padding: 2% 5% 2%;
+                padding: 0% 5% 2%;
             }
 
             #pt1 {
@@ -60,6 +70,7 @@
     <body>
         <header>
             <h1>Code 201 Gist Test</h1>
+            <span id="demo"></span>
         </header>
         <main id="box">
             <p id="pt1">
@@ -78,24 +89,37 @@
         
     <script>
         /* JAVASCRIPT SECTION */ 
+        'use strict'
+        
+        var username = (prompt('What is your name?'));
+        if (username == null || username == ""){
+            alert('Prompt cancelled');
+        } else {
+            alert('Welcome!');
+        }
 
-                var username = prompt("Please create a username");
-                var passcode = prompt("Now enter a secret code")
-                var email = prompt("Enter  an e-mail associated with your account")
-                var course = prompt("Verify Codefellows course you are enrolled in")
-                if (username == null || username == "") {
-                    alert("You have continued as Guest")
-                } else {
-                    alert("Welcome " + username + " you have registered your email as " + email + " while you are enrolled in " + course + " with your password as " + passcode)
-                }
+        var emote = (prompt('How are you feeling?'));
+        if (emote == null || emote == ""){
+            alert('Prompt cancelled');
+        } else {
+            alert('Thanks for letting me know!'); 
+        } 
 
-                var studentTeacher = prompt("Are you a teacher? (yes/no)");
-                if (studentTeacher == "yes") {
-                    alert("Please let me pass")
-                } else {
-                    alert("Let's work together!")
-                }
+        var day = (prompt('What weekday is it?'));
+        if (day == null || day == ""){
+            alert('Prompt cancelled');
+        } else {
+            alert('So it is ' + day + '!'); 
+        } 
 
+        var weather = (prompt('How is the weather? (sunny/cloudy/rainy/etc.)'));
+        if (weather == null || weather == ""){
+            alert('Prompt cancelled');
+        } else {
+            alert('I see!'); 
+        } 
+
+        document.getElementById("demo").innerHTML = "<strong> <em>" + username.toUpperCase() + " IS " + emote.toUpperCase() + " ON A " + " " + weather.toUpperCase() + " " + day.toUpperCase() + "</em> </strong>";
         </script>
 
     <footer>
